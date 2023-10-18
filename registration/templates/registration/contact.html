@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+{% load crispy_forms_filters %}
+{% load crispy_forms_tags %}
+
+{% block title %} Contact {% endblock %}
+
+{% block content %}
+<button><a href="{{ request.META.HTTP_REFERER }}">Back</a></button>
+<div class="card">
+    <br>
+    <img src="https://scontent.flos2-2.fna.fbcdn.net/v/t39.30808-6/328492653_555413843198895_103776754159135415_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHokugDeKn9oeskZn_Zrj8KA-QRNDZnHyAD5BE0NmcfINGWUxXbQBFHCI_NaZ2yjHgEy88eqgjNIaz2ZMqExlp0&_nc_ohc=_chX37WEtjoAX-rfr1U&_nc_zt=23&_nc_ht=scontent.flos2-2.fna&oh=00_AfAYUOiyEpYPJPBA9gi9SlFQglnSZA-2R2YjcGkktv1WPg&oe=65322FEB" alt="John" style="width:100%">
+    
+    <h1>Ijalana Afolabi Isaiah</h1>
+    <p class="title">A Fullstack Web Developer</p>
+    <p>Adekunle Ajasin University, Akungba-Akoko</p>
+    
+    <a href="https://twitter.com/isaiahayodeji1" id="favicon"><i class="fa fa-twitter"></i></a>
+    <a href="www.linkedin.com/in/isaiah-ijalana-895279159" id="favicon"><i class="fa fa-linkedin"></i></a>
+    <a href="https://web.facebook.com/ijalana.isaiah" id="favicon"><i class="fa fa-facebook"></i></a>
+    <p><button class="btn">Contact</button></p>
+  </div>
+  {% endblock %}

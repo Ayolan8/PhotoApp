@@ -1,0 +1,44 @@
+{% extends 'core/base.html' %}
+{% load crispy_forms_filters %}
+{% load crispy_forms_tags %}
+
+{% block title %} {{ title }}{% endblock%}
+
+
+{% block content %} 
+<br>
+<a href="{% url 'home' %}"><button >Back</button></a>
+<br>
+<h2 style="text-align: center;">Sign up!!</h2>
+<br>
+
+<div class="container">
+    <div class="row">
+        
+        <div class="col-md-8"> 
+            <div class="card" style="color:black;">
+                 <div class="card-body">
+                     <div class="card-text">
+                        <form action="" method="POST" novalidate>
+                            {% csrf_token %}
+                            {{ form|crispy}}
+                         <button type="submit" class="btn btn-primary btn-sm"> Register</button>
+                         </form>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% if form.errors or form.non_field_errors %}
+    {% for field in form %}
+        <div class="container">
+            {{ fied.errors }}
+        </div>
+    {% endfor %}
+{% endif %}
+            
+
+
+
+{% endblock%}
